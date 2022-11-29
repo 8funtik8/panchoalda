@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 import 'package:travelappui/components/appbar.dart';
 import 'package:travelappui/components/featuredcard.dart';
@@ -18,11 +17,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   ScrollController _mainScrollController = ScrollController();
 
-  final double _bottomBarHeight = 90;
   HomepageSrollListner _model;
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     _model = HomepageSrollListner.initialise(_mainScrollController);
@@ -59,13 +58,14 @@ class _HomePageState extends State<HomePage> {
                                 width: 50,
                                 height: 50,
                                 child: CircularProgressIndicator());
-                          if (snapshot.connectionState == ConnectionState.waiting)
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting)
                             return Container(
                                 alignment: Alignment.center,
                                 width: 50,
                                 height: 50,
                                 child: CircularProgressIndicator());
-                                
+
                           return ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -110,7 +110,8 @@ class _HomePageState extends State<HomePage> {
                                 width: 50,
                                 height: 50,
                                 child: CircularProgressIndicator());
-                          if (snapshot.connectionState == ConnectionState.waiting)
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting)
                             return Container(
                                 alignment: Alignment.center,
                                 width: 50,
@@ -164,20 +165,20 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               IconButton(
                                   icon: Icon(Icons.home_rounded,
-                                      size: 36, color: kAppTheme.accentColor),
+                                      size: 36, color: kAppTheme.colorScheme.secondary),
                                   onPressed: () {}),
                               IconButton(
                                   icon: Icon(Icons.search,
                                       size: 36,
-                                      color: kAppTheme.accentColor
+                                      color: kAppTheme.colorScheme.secondary
                                           .withOpacity(0.35)),
                                   onPressed: () {
-                                 //    Navigator.pushNamed(context, "/search");
+                                    //    Navigator.pushNamed(context, "/search");
                                   }),
                               IconButton(
                                   icon: Icon(Icons.person,
                                       size: 36,
-                                      color: kAppTheme.accentColor
+                                      color: kAppTheme.colorScheme.secondary
                                           .withOpacity(0.35)),
                                   onPressed: () {})
                             ],

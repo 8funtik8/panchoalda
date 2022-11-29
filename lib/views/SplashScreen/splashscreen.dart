@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelappui/constants/colors.dart';
 import 'package:travelappui/routes/routes.dart';
-import 'package:travelappui/theme.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -25,8 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   bottomRight: Radius.circular(36))),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(36),
-                  bottomRight: Radius.circular(36)),
+                bottomLeft: Radius.circular(36),
+                bottomRight: Radius.circular(36)),
             child: Image(
               image: AssetImage('assets/image/pueblos_magicos.jpg'),
               fit: BoxFit.cover,
@@ -61,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Navigator.pushNamed(context, AppRoutes.ROUTE_Home);
                   },
                   style: ElevatedButton.styleFrom(
-                      primary: appTheme.accentColor,
+                      primary: appTheme.colorScheme.secondary,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
                       elevation: 0,

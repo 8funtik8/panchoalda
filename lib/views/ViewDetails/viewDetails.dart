@@ -85,9 +85,9 @@ class _ViewDetailsState extends State<ViewDetails> {
                         IconButton(
                             icon: Icon(
                               Icons.remove,
-                              color: appTheme.accentColor,
+                              color: appTheme.colorScheme.secondary,
                             ),
-                            splashColor: appTheme.accentColor,
+                            splashColor: appTheme.colorScheme.secondary,
                             onPressed: () {
                               removePackage();
                             }),
@@ -106,15 +106,15 @@ class _ViewDetailsState extends State<ViewDetails> {
                         SizedBox(width: 12),
                         Icon(
                           Icons.timer_rounded,
-                          color: appTheme.accentColor,
+                          color: appTheme.colorScheme.secondary,
                         ),
                         SizedBox(
                           width: 8,
                         ),
                         Text(
                           "5 Days",
-                          style: appTheme.textTheme.caption
-                              .merge(TextStyle(color: appTheme.accentColor)),
+                          style: appTheme.textTheme.caption.merge(
+                              TextStyle(color: appTheme.colorScheme.secondary)),
                         ),
                       ],
                     ),
@@ -133,7 +133,7 @@ class _ViewDetailsState extends State<ViewDetails> {
                       overflow: TextOverflow.fade,
                       style: appTheme.textTheme.bodyText1,
                     ),
-                    SizedBox(height: size.height*0.02),
+                    SizedBox(height: size.height * 0.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -142,14 +142,14 @@ class _ViewDetailsState extends State<ViewDetails> {
                             TextSpan(
                                 text: "\$400",
                                 style: TextStyle(
-                                    color: appTheme.accentColor,
+                                    color: appTheme.colorScheme.secondary,
                                     fontSize: 32,
                                     fontWeight: FontWeight.bold)),
                           ]),
                         ),
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                primary: appTheme.accentColor,
+                                primary: appTheme.colorScheme.secondary,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30)),
                                 elevation: 0,
