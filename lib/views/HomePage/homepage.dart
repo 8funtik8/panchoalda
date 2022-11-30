@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: HomeAppBar,
+      appBar: MyAppBar(),
       body: Container(
         height: size.height,
         width: size.width,
@@ -144,10 +144,11 @@ class _HomePageState extends State<HomePage> {
                 builder: (context, child) {
                   return Positioned(
                       bottom: _model.bottom,
-                      right: 22,
-                      left: 22,
+                      right: 20,
+                      left: 20,
                       child: Container(
-                        padding: EdgeInsets.only(left: 12, right: 12),
+                        padding:
+                            EdgeInsets.only(left: 12, right: 12, bottom: 12),
                         decoration: BoxDecoration(
                             color: Colors.purple,
                             boxShadow: [
@@ -159,27 +160,24 @@ class _HomePageState extends State<HomePage> {
                         height: 75,
                         alignment: Alignment.center,
                         child: Material(
+                          color: Colors.purple,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               IconButton(
                                   icon: Icon(Icons.home_rounded,
-                                      size: 36, color: kAppTheme.colorScheme.secondary),
+                                      size: 36, color: Colors.black),
                                   onPressed: () {}),
                               IconButton(
                                   icon: Icon(Icons.search,
-                                      size: 36,
-                                      color: kAppTheme.colorScheme.secondary
-                                          .withOpacity(0.35)),
+                                      size: 36, color: Colors.black),
                                   onPressed: () {
                                     //    Navigator.pushNamed(context, "/search");
                                   }),
                               IconButton(
                                   icon: Icon(Icons.person,
-                                      size: 36,
-                                      color: kAppTheme.colorScheme.secondary
-                                          .withOpacity(0.35)),
+                                      size: 36, color: Colors.black),
                                   onPressed: () {})
                             ],
                           ),
