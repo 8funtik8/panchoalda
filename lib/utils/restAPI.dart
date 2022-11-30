@@ -18,7 +18,7 @@ class RESTAPI {
         description:
             "Despierta entre verdes y cantos de aves. Prepárate para oír las voces nahuas que con su cocina o artesanía te regalan un poco de ellos. O bien, explora sus cavernas, toma una sesión de medicina tradicional",
         duration: "1 hora 35 minutos",
-        imgUrl: "assets/image/cuetzalan.jpg ",
+        imgUrl: "assets/image/cuetzalan.png",
         locationShort: "Honshu, Japan",
         costumbres: "",
         tradiciones: "",

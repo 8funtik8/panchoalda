@@ -10,7 +10,8 @@ class AppRoutes {
   static const String ROUTE_Splashscreen = "/splash";
   static const String ROUTE_ViewDetails = "/view";
   static const String ROUTE_Login = "/login";
-  // static const String ROUTE_search = "/search";
+  static const String ROUTE_Profile = "/profile";
+  static const String ROUTE_search = "/search";
 
   // ignore: missing_return
   static Route<dynamic> generateRoutes(RouteSettings settings) {
@@ -31,10 +32,13 @@ class AppRoutes {
         return MaterialPageRoute(
             settings: settings, builder: (_) => HomePage());
         break;
-      /*  case ROUTE_search:
-          return MaterialPageRoute(
-            settings: settings, builder: (_) => Search());
-      break; */
+      case ROUTE_Profile:
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => HomePage());
+      case ROUTE_search:
+        return MaterialPageRoute(
+            settings: settings, builder: (_) => HomePage());
+        break;
     }
   }
 }
