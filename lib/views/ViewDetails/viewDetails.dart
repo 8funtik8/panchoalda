@@ -3,7 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:travelappui/components/rating,.dart';
 
+import '../../Globals/VGlobales.dart';
+import '../../models/placesModel.dart';
+
 class ViewDetails extends StatefulWidget {
+  PlaceModel placeModel;
+  ViewDetails({this.placeModel});
   @override
   _ViewDetailsState createState() => _ViewDetailsState();
 }
@@ -27,6 +32,7 @@ class _ViewDetailsState extends State<ViewDetails> {
 
   @override
   Widget build(BuildContext context) {
+    widget.placeModel = IndexGloabl;
     Size size = MediaQuery.of(context).size;
     ThemeData appTheme = Theme.of(context);
     return Scaffold(
@@ -46,8 +52,8 @@ class _ViewDetailsState extends State<ViewDetails> {
               height: size.height * 0.7,
               color: Colors.grey,
               child: Image(
-                image: AssetImage('assets/image/pic1.jpg'),
-                fit: BoxFit.cover,
+                image: AssetImage(IndexGloabl.imgUrl),
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -128,7 +134,7 @@ class _ViewDetailsState extends State<ViewDetails> {
                     ),
                     SizedBox(height: 12),
                     Text(
-                      "Enjoy your winter vacation with warmth and amazing sightseeing on the mountains. Enjoy the best experience with us!",
+                      widget.placeModel.description,
                       maxLines: 4,
                       overflow: TextOverflow.fade,
                       style: appTheme.textTheme.bodyText1,

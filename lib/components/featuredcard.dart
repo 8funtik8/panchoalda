@@ -8,9 +8,7 @@ import 'package:travelappui/theme.dart';
 // ignore: must_be_immutable
 class FeaturedCard extends StatefulWidget {
   PlaceModel placeModel;
-
   FeaturedCard({this.placeModel});
-
   @override
   _FeaturedCardState createState() => _FeaturedCardState();
 }
