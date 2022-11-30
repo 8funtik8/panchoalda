@@ -9,6 +9,8 @@ import 'package:travelappui/views/HomePage/components/featurelist.dart';
 import 'package:travelappui/views/HomePage/state/homepageScrollListner.dart';
 import 'package:travelappui/views/HomePage/state/homepageStateProvider.dart';
 
+import '../../Globals/VGlobales.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -74,6 +76,7 @@ class _HomePageState extends State<HomePage> {
                                 return GestureDetector(
                                     onTap: () {
                                       Navigator.pushNamed(context, "/view");
+                                      IndexGloabl = snapshot.data[index];
                                     },
                                     child: FeaturedCard(
                                       placeModel: snapshot.data[index],
@@ -131,6 +134,7 @@ class _HomePageState extends State<HomePage> {
                                 return GestureDetector(
                                     onTap: () {
                                       Navigator.pushNamed(context, "/view");
+                                      IndexGloabl = snapshot.data[index];
                                     },
                                     child: TravelCard(snapshot.data[index]));
                               });
